@@ -16,18 +16,18 @@ class Args(NamedTuple):
 def get_args() -> Args:
 	""" Get command-line arguments """
 
-	parser = argparse.ArgumentParser(
-		description='Tetranucleotide frequency',
-		formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = argparse.ArgumentParser(
+	    description='Tetranucleotide frequency',
+	    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-	parser.add_argument('dna', metavar='DNA', help='Input DNA sequence')
+    parser.add_argument('dna', metavar='DNA', help='Input DNA sequence')
 
-	args = parser.parse_args()
+    args = parser.parse_args()
 
-	if os.path.isfile(args.dna):
-		args.dna = open(args.dna).read().rstrip()
+    if os.path.isfile(args.dna):
+    	args.dna = open(args.dna).read().rstrip()
 
-	return Args(args.dna)
+    return Args(args.dna)
 
 
 # --------------------------------------------------
