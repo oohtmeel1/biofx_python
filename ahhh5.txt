@@ -1,0 +1,6 @@
+**********************
+PowerShell transcript start
+Start time: 20240207121124
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\ahhh5.txt
+PS C:\Users\amcfa>
