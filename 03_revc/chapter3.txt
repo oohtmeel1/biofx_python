@@ -1,0 +1,597 @@
+**********************
+PowerShell transcript start
+Start time: 20240208124956
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\03_revc\chapter3.txt
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) #The real treasure is the friends you make along the way
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cp solution1_for_loop.py revc.py
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) ./revc.py --help
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python ./revc.py --help # run it again, right this time
+usage: revc.py [-h] DNA
+
+Print the reverse complement of DNA
+
+positional arguments:
+  DNA         Input sequence or file
+
+options:
+  -h, --help  show this help message and exit
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) # gives the reverse complement so
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python ./revc.py AAACCCCGGGTTT
+AAACCCGGGGTTT
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cat tests/inputs/input1.txt #Also accepts files
+AAAACCCGGT
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.61s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.py -f -p 'print the reverse complement of DNA' revc.py
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new.py -f -p 'print the reverse complement of DNA' revc.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new.py': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new
+usage: new.py [-h] [-n NAME] [-e EMAIL] [-p PURPOSE] [-t] [-f] [--version] program
+new.py: error: the following arguments are required: program
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new.py': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.py
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new -h
+usage: new.py [-h] [-n NAME] [-e EMAIL] [-p PURPOSE] [-t] [-f] [--version] program
+
+Create Python argparse program
+
+positional arguments:
+  program               Program name
+
+options:
+  -h, --help            show this help message and exit
+  -n NAME, --name NAME  Name for docstring (default: Anonymous)
+  -e EMAIL, --email EMAIL
+                        Email for docstring (default: Anonymous@localhost)
+  -p PURPOSE, --purpose PURPOSE
+                        Purpose for docstring (default: Rock the Casbah)
+  -t, --write_test      Create basic test.py (default: False)
+  -f, --force           Overwrite existing (default: False)
+  --version             show program's version number and exit
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.py
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.python
+
+new.python: The term 'new.python' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.python: The term 'new.python' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new.py -f -p 'print the reverse complement of DNA' revc.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new.py': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python -f -p 'print the reverse complement of DNA' revc.py
+Unknown option: -f
+usage: C:\Users\amcfa\anaconda3\python.exe [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new -f -p 'print the reverse complement of DNA' revc.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new.py -f -p 'print the reverse complement of DNA' revc.py 
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new.py': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) $ new.py -f -p 'print the reverse complement of DNA' revc.py 
+
+$: The term '$' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+$: The term '$' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.py -f -p 'print the reverse complement of DNA' revc.py 
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.py -f -p 'print the reverse complement of DNA' revc.py 
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python new
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\new': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new
+usage: new.py [-h] [-n NAME] [-e EMAIL] [-p PURPOSE] [-t] [-f] [--version] program
+new.py: error: the following arguments are required: program
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new.py
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+new.py: The term 'new.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new python
+Done, see new script "python".
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) new revc.py
+"revc.py" exists.  Overwrite? [yN] y
+Done, see new script "revc.py".
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) #Starting to understand how this all works now
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) #To make a new file do new.filename.type(ex new revc.py)
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) ./revc.py AACCCTTTT
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase FAILED                                                                                                                                                                                                                                          [ 57%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+____________________________________________________________________________________________________________________________________ test_uppercase _____________________________________________________________________________________________________________________________________
+
+    def test_uppercase() -> None:
+        """ Runs on uppercase input """
+
+        rv, out = getstatusoutput(f'{RUN} AAAACCCGGT')
+        assert rv == 0
+>       assert out == 'ACCGGGTTTT'
+E       assert 'str_arg = ""... "AAAACCCGGT"' == 'ACCGGGTTTT'
+E         - ACCGGGTTTT
+E         + str_arg = ""
+E         + int_arg = "0"
+E         + file_arg = ""
+E         + flag_arg = "False"
+E         + positional = "AAAACCCGGT"
+
+tests\revc_test.py:47: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_uppercase - assert 'str_arg = ""... "AAAACCCGGT"' == 'ACCGGGTTTT'
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 3 passed in 0.53s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python
+Python 3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> dna = 'AAACCCTTTGGG'
+>>> dna[:2] # First two letters
+'AA'
+>>> dna[-2:] # Last two letters
+'GG'
+>>> dna[:] # The whole thing
+'AAACCCTTTGGG'
+>>> dna[::-1] # reverse a string
+'GGGTTTCCCAAA'
+>>> reversed(dna) #python has a built in too
+<reversed object at 0x000002789E233130>
+>>> "".join(reversed(dna))
+'GGGTTTCCCAAA'
+>>> list(reversed(dna))
+['G', 'G', 'G', 'T', 'T', 'T', 'C', 'C', 'C', 'A', 'A', 'A']
+>>> list(dna)
+['A', 'A', 'A', 'C', 'C', 'C', 'T', 'T', 'T', 'G', 'G', 'G']
+>>> "What about this?"
+'What about this?'
+>>> abc="What about this?"
+>>> list(abc)
+['W', 'h', 'a', 't', ' ', 'a', 'b', 'o', 'u', 't', ' ', 't', 'h', 'i', 's', '?']
+>>> rev =''
+>>> for base in reversed(dna):
+...     rev +=base
+...
+>>> rev
+'GGGTTTCCCAAA'
+>>> ####Creating a Decision treeee
+>>> exit()
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase FAILED                                                                                                                                                                                                                                          [ 57%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+____________________________________________________________________________________________________________________________________ test_uppercase _____________________________________________________________________________________________________________________________________
+
+    def test_uppercase() -> None:
+        """ Runs on uppercase input """
+
+        rv, out = getstatusoutput(f'{RUN} AAAACCCGGT')
+        assert rv == 0
+>       assert out == 'ACCGGGTTTT'
+E       assert 'str_arg = ""... "AAAACCCGGT"' == 'ACCGGGTTTT'
+E         - ACCGGGTTTT
+E         + str_arg = ""
+E         + int_arg = "0"
+E         + file_arg = ""
+E         + flag_arg = "False"
+E         + positional = "AAAACCCGGT"
+
+tests\revc_test.py:47: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_uppercase - assert 'str_arg = ""... "AAAACCCGGT"' == 'ACCGGGTTTT'
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 3 passed in 0.53s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage FAILED                                                                                                                                                                                                                                              [ 28%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_usage _______________________________________________________________________________________________________________________________________
+
+    def test_usage() -> None:
+        """ Prints usage """
+
+        for arg in ['-h', '--help']:
+            rv, out = getstatusoutput(f'{RUN} {arg}')
+>           assert rv == 0
+E           assert 1 == 0
+
+tests\revc_test.py:28: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_usage - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 1 passed in 0.29s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage FAILED                                                                                                                                                                                                                                              [ 28%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_usage _______________________________________________________________________________________________________________________________________
+
+    def test_usage() -> None:
+        """ Prints usage """
+
+        for arg in ['-h', '--help']:
+            rv, out = getstatusoutput(f'{RUN} {arg}')
+>           assert rv == 0
+E           assert 1 == 0
+
+tests\revc_test.py:28: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_usage - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 1 passed in 0.29s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage FAILED                                                                                                                                                                                                                                              [ 28%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_usage _______________________________________________________________________________________________________________________________________
+
+    def test_usage() -> None:
+        """ Prints usage """
+
+        for arg in ['-h', '--help']:
+            rv, out = getstatusoutput(f'{RUN} {arg}')
+>           assert rv == 0
+E           assert 1 == 0
+
+tests\revc_test.py:28: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_usage - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 1 passed in 0.28s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest.revc.py -xv #Forgot to save the first time
+
+pytest.revc.py: The term 'pytest.revc.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+pytest.revc.py: The term 'pytest.revc.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage FAILED                                                                                                                                                                                                                                              [ 28%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_usage _______________________________________________________________________________________________________________________________________
+
+    def test_usage() -> None:
+        """ Prints usage """
+
+        for arg in ['-h', '--help']:
+            rv, out = getstatusoutput(f'{RUN} {arg}')
+>           assert rv == 0
+E           assert 1 == 0
+
+tests\revc_test.py:28: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_usage - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 1 passed in 0.28s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage FAILED                                                                                                                                                                                                                                              [ 28%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_usage _______________________________________________________________________________________________________________________________________
+
+    def test_usage() -> None:
+        """ Prints usage """
+
+        for arg in ['-h', '--help']:
+            rv, out = getstatusoutput(f'{RUN} {arg}')
+>           assert rv == 0
+E           assert 1 == 0
+
+tests\revc_test.py:28: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_usage - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 1 passed in 0.27s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.60s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Forgot to save the first time
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.60s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.61s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.59s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists FAILED                                                                                                                                                                                                                                             [ 14%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_exists ______________________________________________________________________________________________________________________________________
+
+    def test_exists() -> None:
+        """ Program exists """
+
+>       assert os.path.isfile(PRG)
+E       AssertionError: assert False
+E        +  where False = <function isfile at 0x000002D47DE9C0E0>('./revc.py')
+E        +    where <function isfile at 0x000002D47DE9C0E0> = <module 'ntpath' (frozen)>.isfile
+E        +      where <module 'ntpath' (frozen)> = os.path
+
+tests\revc_test.py:19: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/revc_test.py::test_exists - AssertionError: assert False
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+=================================================================================================================================== 1 failed in 0.21s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.62s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.60s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\03_revc
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/revc_test.py::test_exists PASSED                                                                                                                                                                                                                                             [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                                                                                                                                                                                              [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                                                                                                                                                                                            [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                                                                                                                                                                                          [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                                                                                                                                                                                          [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                                                                                                                                                                                             [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                                                                                                                                                                                             [100%]
+
+=================================================================================================================================== 7 passed in 0.60s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20240208135543
+**********************

@@ -1,0 +1,252 @@
+**********************
+PowerShell transcript start
+Start time: 20240208122300
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\ahhh6.txt
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) ## Starting to test sequences on own
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) python ./rnab.py tests/inputs/input1.txt
+Done, wrote 1 sequence in 1 file to directory "out".
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) python ./rnab.py tests/inputs/input2.txt
+Done, wrote 2 sequences in 1 file to directory "out".
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) python ./rnab.py tests/inputs/input3.txt
+Done, wrote 2 sequences in 1 file to directory "out".
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) wc -l out
+
+wc: The term 'wc' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+wc: The term 'wc' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) pytest -xv
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\02_rna
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/rna_test.py::test_exists PASSED                                                                                                                                                                                                                                              [ 14%]
+tests/rna_test.py::test_usage PASSED                                                                                                                                                                                                                                               [ 28%]
+tests/rna_test.py::test_no_args FAILED                                                                                                                                                                                                                                             [ 42%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+_____________________________________________________________________________________________________________________________________ test_no_args ______________________________________________________________________________________________________________________________________
+
+    def test_no_args() -> None:
+        """ Dies on no args """
+
+        retval, out = getstatusoutput(RUN)
+        assert retval != 0
+>       assert out.lower().startswith('usage:')
+E       assert False
+E        +  where False = <built-in method startswith of str object at 0x0000020940D843F0>('usage:')
+E        +    where <built-in method startswith of str object at 0x0000020940D843F0> = 'traceback (most recent call last):\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 54, in <module>\n    main()\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 36, i
+n main\n    args = get_args()\n           ^^^^^^^^^^\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 26, in get_args\n    if os.path.isfile(args.dna):\n                      ^^^^^^^^\nattributeerror: \'namespace\' object has no attribute \'dna\''.startswith
+E        +      where 'traceback (most recent call last):\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 54, in <module>\n    main()\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 36, in main\n    args = get_args()\n           ^^^^^^^^^^\n  file "c:\
+\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 26, in get_args\n    if os.path.isfile(args.dna):\n                      ^^^^^^^^\nattributeerror: \'namespace\' object has no attribute \'dna\'' = <built-in method lower of str object at 0x0000020940D845D0>()
+E        +        where <built-in method lower of str object at 0x0000020940D845D0> = 'Traceback (most recent call last):\n  File "C:\\Users\\amcfa\\biofx_python\\02_rna\\rna.py", line 54, in <module>\n    main()\n  File "C:\\Users\\amcfa\\biofx_python\\02_rna\\rna.py", line 36, in
+ main\n    args = get_args()\n           ^^^^^^^^^^\n  File "C:\\Users\\amcfa\\biofx_python\\02_rna\\rna.py", line 26, in get_args\n    if os.path.isfile(args.dna):\n                      ^^^^^^^^\nAttributeError: \'Namespace\' object has no attribute \'dna\''.lower
+
+tests\rna_test.py:41: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/rna_test.py::test_no_args - assert False
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================================================================================================== 1 failed, 2 passed in 0.47s ==============================================================================================================================
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) pytest -xv
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\02_rna
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/rna_test.py::test_exists FAILED                                                                                                                                                                                                                                              [ 14%]
+
+======================================================================================================================================= FAILURES ========================================================================================================================================
+______________________________________________________________________________________________________________________________________ test_exists ______________________________________________________________________________________________________________________________________
+
+    def test_exists() -> None:
+        """ Program exists """
+
+>       assert os.path.isfile(PRG)
+E       AssertionError: assert False
+E        +  where False = <function isfile at 0x0000019242DEC0E0>('./rna.py')
+E        +    where <function isfile at 0x0000019242DEC0E0> = <module 'ntpath' (frozen)>.isfile
+E        +      where <module 'ntpath' (frozen)> = os.path
+
+tests\rna_test.py:22: AssertionError
+================================================================================================================================ short test summary info ================================================================================================================================
+FAILED tests/rna_test.py::test_exists - AssertionError: assert False
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+=================================================================================================================================== 1 failed in 0.22s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) pytest -xv
+================================================================================================================================== test session starts ==================================================================================================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\02_rna
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/rna_test.py::test_exists PASSED                                                                                                                                                                                                                                              [ 14%]
+tests/rna_test.py::test_usage PASSED                                                                                                                                                                                                                                               [ 28%]
+tests/rna_test.py::test_no_args PASSED                                                                                                                                                                                                                                             [ 42%]
+tests/rna_test.py::test_bad_file PASSED                                                                                                                                                                                                                                            [ 57%]
+tests/rna_test.py::test_good_input1 PASSED                                                                                                                                                                                                                                         [ 71%]
+tests/rna_test.py::test_good_input2 PASSED                                                                                                                                                                                                                                         [ 85%]
+tests/rna_test.py::test_good_multiple_inputs PASSED                                                                                                                                                                                                                                [100%]
+
+=================================================================================================================================== 7 passed in 0.62s ===================================================================================================================================
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) for (py in ./solution* : do echo $py && time $py ./tests/inputs/input3.txt );done
+At line:1 char:77
++ … /solution* : do echo $py && time $py ./tests/inputs/input3.txt );done
++                                                                   ~
+Missing statement body in for loop.
+
+ParserError: 
+Line |
+   1 |  … /solution* : do echo $py && time $py ./tests/inputs/input3.txt );done
+     |                                                                    ~
+     | Missing statement body in for loop.
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) for (py in ./solution*) ; do echo $py && time $py ./tests/inputs/input3.txt ;done
+At line:1 char:24
++ for (py in ./solution*) ; do echo $py && time $py ./tests/inputs/inpu …
++                        ~
+Missing statement body in for loop.
+
+At line:1 char:29
++ for (py in ./solution*) ; do echo $py && time $py ./tests/inputs/inpu …
++                             ~
+Missing statement body in do loop.
+
+ParserError: 
+Line |
+   1 |  for (py in ./solution*) ; do echo $py && time $py ./tests/inputs/inpu …
+     |                         ~
+     | Missing statement body in for loop.
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/input3.txt} ;done
+At line:1 char:24
++ for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/inp …
++                        ~
+Missing statement body in for loop.
+
+At line:1 char:30
++ for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/inp …
++                              ~
+Missing statement body in do loop.
+
+ParserError: 
+Line |
+   1 |  for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/inp …
+     |                         ~
+     | Missing statement body in for loop.
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/input3.txt}
+At line:1 char:24
++ for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/inp …
++                        ~
+Missing statement body in for loop.
+
+At line:1 char:30
++ for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/inp …
++                              ~
+Missing statement body in do loop.
+
+ParserError: 
+Line |
+   1 |  for (py in ./solution*) ; {do echo $py && time $py ./tests/inputs/inp …
+     |                         ~
+     | Missing statement body in for loop.
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) foreach (py in ./solution*) {do echo $py && time $py ./tests/inputs/input3.txt}
+At line:1 char:10
++ foreach (py in ./solution*) {do echo $py && time $py ./tests/inputs/i …
++          ~
+Missing variable name after foreach.
+The correct form is: foreach ($a in $b) {...}
+
+At line:1 char:27
++ foreach (py in ./solution*) {do echo $py && time $py ./tests/inputs/i …
++                           ~
+Unexpected token ')' in expression or statement.
+
+At line:1 char:32
++ foreach (py in ./solution*) {do echo $py && time $py ./tests/inputs/i …
++                                ~
+Missing statement body in do loop.
+
+ParserError: 
+Line |
+   1 |  foreach (py in ./solution*) {do echo $py && time $py ./tests/inputs/i …
+     |           ~
+     | Missing variable name after foreach. The correct form is: foreach ($a in $b) {...}
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) foreach ($py in $solution*) {do echo $py && time $py ./tests/inputs/input3.txt}
+At line:1 char:27
++ foreach ($py in $solution*) {do echo $py && time $py ./tests/inputs/i …
++                           ~
+You must provide a value expression following the '*' operator.
+
+At line:1 char:32
++ foreach ($py in $solution*) {do echo $py && time $py ./tests/inputs/i …
++                                ~
+Missing statement body in do loop.
+
+ParserError: 
+Line |
+   1 |  foreach ($py in $solution*) {do echo $py && time $py ./tests/inputs/i …
+     |                            ~
+     | You must provide a value expression following the '*' operator.
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) foreach ($py in $solution) {do echo $py && time $py ./tests/inputs/input3.txt}
+At line:1 char:31
++ foreach ($py in $solution) {do echo $py && time $py ./tests/inputs/in …
++                               ~
+Missing statement body in do loop.
+
+ParserError: 
+Line |
+   1 |  foreach ($py in $solution) {do echo $py && time $py ./tests/inputs/in …
+     |                                ~
+     | Missing statement body in do loop.
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) foreach ($py in $solution) {echo $py && time $py ./tests/inputs/input3.txt}
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) Measure-Command {python ./rnab.py tests/inputs/input3.txt}
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 73
+Ticks             : 731888
+TotalDays         : 8.47092592592593E-07
+TotalHours        : 2.03302222222222E-05
+TotalMinutes      : 0.00121981333333333
+TotalSeconds      : 0.0731888
+TotalMilliseconds : 73.1888
+
+
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20240208124643
+**********************

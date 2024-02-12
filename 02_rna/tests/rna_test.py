@@ -8,7 +8,7 @@ import string
 import random
 import shutil
 
-PRG = './rna.py'
+PRG = './rnab.py'
 RUN = f'python {PRG}' if platform.system() == 'Windows' else PRG
 INPUT1 = './tests/inputs/input1.txt'
 INPUT2 = './tests/inputs/input2.txt'

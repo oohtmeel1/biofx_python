@@ -1,0 +1,492 @@
+**********************
+PowerShell transcript start
+Start time: 20240212115533
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\03_revc\chapter3_a.txt
+PS C:\Users\amcfa>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cat tests/inputs/input1.txt #Also accepts files
+AAAACCCGGT
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cat tests/inputs/input2.txt #Also accepts files
+TACATTACAGTCGCTGGGTAAGACGCCTTCGATAGGTCCCTCAATGCGGCGGACGGGGGTCAATCCCCTAGAACTTAGCCGTATTTGAGGGAATCAGCTGCTCTACGGTAGGTGTCTGTAGCCCTTCCGTTCTATAAAAGTTGACGAATGTTGCAGTGGACTCTTATTATACAGCGGCACCCTTGACACCGCCCGTGTAGAGCGTTCAGGCCCGGAGAGTACGGAGGATGTGGAGAACACTACTGGTTCGACCCCGTAATCTATGCACTTGCCCTATGTGAGGCCATGACATCCGAACCGCTAATTATCGACCGACCATTGGTCCACTGCTCCGCTCTGACTCTGGGGCATAGACTATGATGTTCACGGCGTGTGTACTGCTTTTTTAGGCACGGCCGGGCTGCTCTGTAAGAGGAAATCACGGTGCAACCAGTCAGTAGAGGGCTTTGCTAGCTACGGATAGGAGATAAAGGTCTTTCCATACACGGTGTGTATACAGCTGTTCCCCGTGTACAAAGGGCCAACAGCATGCTGGGCATTTGAGACGTCAGTGGCCCGAAGCTTAGAAATTCTAACAGTCTCCTCAAGAGCATGGAGCTTTCATCATCTCAAATTGGACAAGCTGTACCAGACTTATTCTGCTGTGATTCACCATCTGAGCTAAACCTGTTACCGACAGACAGTAAAAATAGAGGTTACTTATACTCCAAGCATAATCTTGCTAGGGTAGTTGGACTGTCAAGCATCAAATATCCAATTGCCGACGCCCTTCCGATAATAATGATACCAGCACGCGGAAGATATCCACAGATTCGATGTGTCGAGAATGGACCCCTTCGGGGACAAGCTGAGCCAGCCAGAAATTAAGCCGCAGTGGCTACGAACACGGTCTTTACACACAGCACGTGTTGGAGCATGGGGAGGTCTGGCGAACTCCCCTATGCTCGCTGTTTTTAGGCTGCTTAACACGATCCTAACAGAGTACGAGAGAGCTACAAC
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+
+tests/revc_test.py::test_exists PASSED                                                                           [ 14%]
+tests/revc_test.py::test_usage PASSED                                                                            [ 28%]
+tests/revc_test.py::test_no_args PASSED                                                                          [ 42%]
+tests/revc_test.py::test_uppercase PASSED                                                                        [ 57%]
+tests/revc_test.py::test_lowercase PASSED                                                                        [ 71%]
+tests/revc_test.py::test_input1 PASSED                                                                           [ 85%]
+tests/revc_test.py::test_input2 PASSED                                                                           [100%]
+
+================================================== 7 passed in 0.66s ==================================================
+PS C:\Users\amcfa\biofx_python\03_revc>
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pylint reve.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pylint reve.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) flake8 reve.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) ##Changing to a list comprehension
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cat tests/inputs/input1.txt #Also accepts files
+AAAACCCGGT
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) flake8 reve.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pylint reve.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv #Checking to see that my new test case is here, it should fail
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) ## Missing a letter
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) revc_test_a.py
+revc_test_a.py: The term 'revc_test_a.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+revc_test_a.py: The term 'revc_test_a.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python \inputs\revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py 'ACCTTGGG'# Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py 'ACCTTGGG'# Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc.py 'ACTTGG'
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revef.py 'ACTTGG'
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revef.py 'ACTTGG'
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revef.py 'ACTTGG'
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # Now that it is iterating I can try to run through them
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) revc_test_a.py
+revc_test_a.py: The term 'revc_test_a.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+revc_test_a.py: The term 'revc_test_a.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py # iterating over all of my files so I can do this one by one
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) revd.py -h
+revd.py: The term 'revd.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+revd.py: The term 'revd.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revd.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) ./revc.py AACCCTTTT
+./revc.py: The term './revc.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+./revc.py: The term './revc.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) ./revc.py -h
+./revc.py: The term './revc.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+./revc.py: The term './revc.py' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revd.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revef.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python /my_tests/revef.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python /my_tests/revd.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python '/my_tests/'+revd.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd 'my_tests'
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) python revd.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) cd '/03_revc/'
+Set-Location: Cannot find path 'C:\03_revc\' because it does not exist.
+Set-Location: Cannot find path 'C:\03_revc\' because it does not exist.
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) cd ..
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revef.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>

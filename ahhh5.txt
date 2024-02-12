@@ -1,6 +1,66 @@
 **********************
 PowerShell transcript start
-Start time: 20240207121124
+Start time: 20240207131011
 **********************
 Transcript started, output file is C:\Users\amcfa\biofx_python\ahhh5.txt
-PS C:\Users\amcfa>
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) python rnab.py tests/inputs/input1.txt
+tests/inputs/input1.txt -> out\input1.txt
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) ##Tested basic part where I just print directories
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) python rnab.py tests/inputs/input2.txt
+tests/inputs/input2.txt -> out\input2.txt
+TTAGCCCAGACTAGGACTTT
+AACTAGTCAAAGTACACC
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) pytest -xv 
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.5, pytest-7.4.0, pluggy-1.0.0 -- C:\Users\amcfa\anaconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\02_rna
+plugins: anyio-3.5.0, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/rna_test.py::test_exists PASSED                                                                            [ 14%]
+tests/rna_test.py::test_usage PASSED                                                                             [ 28%]
+tests/rna_test.py::test_no_args FAILED                                                                           [ 42%]
+
+====================================================== FAILURES =======================================================
+____________________________________________________ test_no_args _____________________________________________________
+
+    def test_no_args() -> None:
+        """ Dies on no args """
+
+        retval, out = getstatusoutput(RUN)
+        assert retval != 0
+>       assert out.lower().startswith('usage:')
+E       assert False
+E        +  where False = <built-in method startswith of str object at 0x000001C7AE4143F0>('usage:')
+E        +    where <built-in method startswith of str object at 0x000001C7AE4143F0> = 'traceback (most recent call last
+):\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 54, in <module>\n    main()\n  file "c:\\users\\amcfa\
+\biofx_python\\02_rna\\rna.py", line 36, in main\n    args = get_args()\n           ^^^^^^^^^^\n  file "c:\\users\\amcfa
+\\biofx_python\\02_rna\\rna.py", line 26, in get_args\n    if os.path.isfile(args.dna):\n                      ^^^^^^^^\
+nattributeerror: \'namespace\' object has no attribute \'dna\''.startswith
+E        +      where 'traceback (most recent call last):\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line
+ 54, in <module>\n    main()\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 36, in main\n    args = get_
+args()\n           ^^^^^^^^^^\n  file "c:\\users\\amcfa\\biofx_python\\02_rna\\rna.py", line 26, in get_args\n    if os.
+path.isfile(args.dna):\n                      ^^^^^^^^\nattributeerror: \'namespace\' object has no attribute \'dna\'' =
+ <built-in method lower of str object at 0x000001C7AE4145D0>()
+E        +        where <built-in method lower of str object at 0x000001C7AE4145D0> = 'Traceback (most recent call last)
+:\n  File "C:\\Users\\amcfa\\biofx_python\\02_rna\\rna.py", line 54, in <module>\n    main()\n  File "C:\\Users\\amcfa\\
+biofx_python\\02_rna\\rna.py", line 36, in main\n    args = get_args()\n           ^^^^^^^^^^\n  File "C:\\Users\\amcfa\
+\biofx_python\\02_rna\\rna.py", line 26, in get_args\n    if os.path.isfile(args.dna):\n                      ^^^^^^^^\n
+AttributeError: \'Namespace\' object has no attribute \'dna\''.lower
+
+tests\rna_test.py:41: AssertionError
+=============================================== short test summary info ===============================================
+FAILED tests/rna_test.py::test_no_args - assert False
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================================= 1 failed, 2 passed in 0.47s =============================================
+PS C:\Users\amcfa\biofx_python\02_rna>
+(base) stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20240207140127
+**********************
