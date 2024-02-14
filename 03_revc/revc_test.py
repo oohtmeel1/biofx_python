@@ -6,9 +6,7 @@ import platform
 import os
 import re
 
-
-
-PRG = './revec.py'
+PRG = './revc_bioseq.py'
 RUN = f'python {PRG}' if platform.system() == 'Windows' else PRG
 TEST1 = ('./tests/inputs/input1.txt', './tests/inputs/output1.txt')
 TEST2 = ('./tests/inputs/input2.txt', './tests/inputs/output2.txt')

@@ -8,7 +8,7 @@ Purpose: Rock the Casbah
 import argparse
 import os
 from typing import NamedTuple
-
+from Bio import Seq
 
 class Args(NamedTuple):
     """ Command-line arguments """
@@ -37,11 +37,9 @@ def get_args() -> Args:
 def main() -> None:
     """ Make a jazz noise here """
     args=get_args()
-    trans ={'A':'T','C':'G','G':'C','T':'A','a':'t','c':'g','t':'a','g':'c'}
-    complement = []
-    for base in args.dna:
-        complement+=trans.get(base,base)
-    print(''.join(reversed(complement)))
+    
+    print(Seq.reverse_complement(args.dna))
+
 
 # --------------------------------------------------
 if __name__ == '__main__':

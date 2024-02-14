@@ -1,0 +1,262 @@
+**********************
+PowerShell transcript start
+Start time: 20240213122736
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\automating_file_loading.txt
+PS C:\Users\amcfa>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revec_test_a.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\revec_test_a.py': [Errno
+2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd "03_revc/my_tests" #changing to correct directory
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\03_revc\03_revc\my_tests' because it does not exist.
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\03_revc\03_revc\my_tests' because it does not exist.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd "/my_tests" #changing to correct directory
+Set-Location: Cannot find path 'C:\my_tests' because it does not exist.
+Set-Location: Cannot find path 'C:\my_tests' because it does not exist.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc\my_tests" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) python revec_test_a.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\my_tests\\revec_test_a.py
+': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) python revec_test_a.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\my_tests\\revec_test_a.py
+': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) python revc_test_a.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\my_tests\\revc_test_a.py'
+: [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) python revc_test_a.py -h
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\03_revc\\my_tests\\revc_test_a.py'
+: [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc\my_tests" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) ...
+...: The term '...' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+...: The term '...' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) .
+At line:1 char:1
++ .
++ ~
+Missing expression after '.' in pipeline element.
+ParserError: 
+Line |
+   1 |  .
+     |  ~
+     | Missing expression after '.' in pipeline element.
+
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) ..
+..: The term '..' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+..: The term '..' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) cd-
+cd-: The term 'cd-' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+cd-: The term 'cd-' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\03_revc\my_tests>
+(base) cd -
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_a.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py -h
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py --help
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest revc_test.py-xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest revc_test.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) python revc_test_b.py 
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) mypy solution1_for_loop.py
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd -
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\03_revc\my_tests' because it does not exist.
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\03_revc\my_tests' because it does not exist.
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) cd
+PS C:\Users\amcfa>
+(base) cd "C:\Users\amcfa\biofx_python\03_revc" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\03_revc>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\03_revc>
