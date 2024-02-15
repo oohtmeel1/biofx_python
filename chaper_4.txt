@@ -1,0 +1,238 @@
+**********************
+PowerShell transcript start
+Start time: 20240215114558
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\chaper_4.txt
+PS C:\Users\amcfa>
+(base) cd "C:\Users\amcfa\biofx_python\04_fib" #changing to correct directory
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) cp solution1_list.py fib.py
+Copy-Item: Cannot find path 'C:\Users\amcfa\biofx_python\04_fib\solution1_list.py' because it does not exist.
+Copy-Item: Cannot find path 'C:\Users\amcfa\biofx_python\04_fib\solution1_list.py' because it does not exist.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python solution1_list.py fib.py
+C:\Users\amcfa\anaconda3\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\04_fib\\solution1_list.py': [Errno
+ 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) new
+usage: new.py [-h] [-n NAME] [-e EMAIL] [-p PURPOSE] [-t] [-f] [--version] program
+new.py: error: the following arguments are required: program
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) new fib.py
+Done, see new script "fib.py".
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) cp solution1_list.py fib.py
+Copy-Item: Cannot find path 'C:\Users\amcfa\biofx_python\04_fib\solution1_list.py' because it does not exist.
+Copy-Item: Cannot find path 'C:\Users\amcfa\biofx_python\04_fib\solution1_list.py' because it does not exist.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) cp solution1_list_closure.py fib.py
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) ./fib.py -h
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py -h
+[main 2024-02-15T16:53:04.697Z] WSL is not installed, so could not detect WSL profiles
+Calculate Fibonacci:53:13.198Z] Extension host with pid 14880 exited with code: 0, signal: unknown.
+
+positional arguments:
+  generations  Number of generations
+  litter       Size of litter per generation
+
+options:
+  -h, --help   show this help message and exit
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py -h # To get the help menu to come up in command line
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py foo #Trying to pass non-integers and the program should fail
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pythoon fib.py 3.2
+pythoon: The term 'pythoon' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+pythoon: The term 'pythoon' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py 3.2 # Using integer values
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py 3.2 # Using non-integer values
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py -3 #Negative number
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) python fib.py -3 10 #Negative number
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) # First test case passed. Where I created an imperative solution
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) #Made a simple function all of it passed
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pylint fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) flake8 fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) mypy fib.py
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) #Creating a generator now
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) # Not sure if it supposed to pass  or not
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) # Not sure if it supposed to pass  or not again
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) for n in 10 20 30 40;
+At line:1 char:4
++ for n in 10 20 30 40;
++    ~
+Missing opening '(' after keyword 'for'.
+ParserError: 
+Line |
+   1 |  for n in 10 20 30 40;
+     |     ~
+     | Missing opening '(' after keyword 'for'.
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) for n in 10 20 30 40;do echo " ==> $n <==" && time ./fib.py $n 1
+At line:1 char:4
++ for n in 10 20 30 40;do echo " ==> $n <==" && time ./fib.py $n 1
++    ~
+Missing opening '(' after keyword 'for'.
+
+At line:1 char:24
++ for n in 10 20 30 40;do echo " ==> $n <==" && time ./fib.py $n 1
++                        ~
+Missing statement body in do loop.
+ParserError: 
+Line |
+   1 |  for n in 10 20 30 40;do echo " ==> $n <==" && time ./fib.py $n 1
+     |     ~
+     | Missing opening '(' after keyword 'for'.
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pytest -xv
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) #Used memoization and lru_cache
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) pip install fastero
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine -L prg ./fib.py
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) winget install hyperfine
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine -L prg ./fib.py
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine -L prg fib.py
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine fib.py
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine 'fib.py'
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine -h
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) Measure-Command {python ./fib.py tests/inputs/input1.txt}
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 71
+Ticks             : 719777
+TotalDays         : 8.33075231481481E-07
+TotalHours        : 1.99938055555556E-05
+TotalMinutes      : 0.00119962833333333
+TotalSeconds      : 0.0719777
+TotalMilliseconds : 71.9777
+
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) hyperfine {python ./fib.py tests/inputs/input1.txt}
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+hyperfine: The term 'hyperfine' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\04_fib>
+(base) stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20240215140230
+**********************
