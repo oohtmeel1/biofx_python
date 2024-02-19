@@ -17,3 +17,405 @@ PSRemotingProtocolVersion: 2.3
 SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is C:\Users\amcfa\biofx_python\Chapter4.txt
+PS C:\Users\amcfa\biofx_python> python all_test.py
+C:\gitfiles\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\all_test.py': [Errno 2] No such file or directo
+ry
+PS C:\Users\amcfa\biofx_python> all_test.py
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python> cat Makefile
+install:
+	python3 -m pip install -r requirements.txt
+
+test:
+	./bin/uber_test.sh
+PS C:\Users\amcfa\biofx_python> python3 -m pip install -r requirements.txt
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings
+> Manage App Execution Aliases.
+PS C:\Users\amcfa\biofx_python> python -m pip install -r requirements.txt
+Collecting biopython (from -r requirements.txt (line 1))
+  Downloading biopython-1.83-cp311-cp311-win_amd64.whl.metadata (13 kB)
+Collecting black (from -r requirements.txt (line 2))
+  Downloading black-24.2.0-cp311-cp311-win_amd64.whl.metadata (74 kB)
+     ---------------------------------------- 74.6/74.6 kB 2.0 MB/s eta 0:00:00
+Collecting csvkit (from -r requirements.txt (line 3))
+  Downloading csvkit-1.4.0-py2.py3-none-any.whl.metadata (3.1 kB)
+Collecting csvchk (from -r requirements.txt (line 4))
+  Downloading csvchk-0.3.2-py3-none-any.whl (7.8 kB)
+Collecting flake8 (from -r requirements.txt (line 5))
+  Downloading flake8-7.0.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting graphviz (from -r requirements.txt (line 6))
+  Downloading graphviz-0.20.1-py3-none-any.whl (47 kB)
+     ---------------------------------------- 47.0/47.0 kB 2.5 MB/s eta 0:00:00
+Collecting iteration_utilities (from -r requirements.txt (line 7))
+  Downloading iteration_utilities-0.12.0-cp311-cp311-win_amd64.whl.metadata (15 kB)
+Collecting mypy (from -r requirements.txt (line 8))
+  Downloading mypy-1.8.0-cp311-cp311-win_amd64.whl.metadata (1.9 kB)
+Requirement already satisfied: new-py in c:\gitfiles\lib\site-packages (from -r requirements.txt (line 9)) (0.1.2)
+Requirement already satisfied: pandas in c:\gitfiles\lib\site-packages (from -r requirements.txt (line 10)) (2.1.0)
+Collecting pylint (from -r requirements.txt (line 11))
+  Downloading pylint-3.0.3-py3-none-any.whl.metadata (12 kB)
+Collecting pytest (from -r requirements.txt (line 12))
+  Downloading pytest-8.0.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-flake8 (from -r requirements.txt (line 13))
+  Downloading pytest_flake8-1.1.1-py2.py3-none-any.whl (6.6 kB)
+Collecting pytest-mypy (from -r requirements.txt (line 14))
+  Downloading pytest_mypy-0.10.3-py3-none-any.whl.metadata (3.6 kB)
+Collecting pytest-pylint (from -r requirements.txt (line 15))
+  Downloading pytest_pylint-0.21.0-py3-none-any.whl.metadata (6.4 kB)
+Requirement already satisfied: requests in c:\gitfiles\lib\site-packages (from -r requirements.txt (line 16)) (2.31.0)
+Requirement already satisfied: rich in c:\gitfiles\lib\site-packages (from -r requirements.txt (line 17)) (13.5.3)
+Requirement already satisfied: tabulate in c:\gitfiles\lib\site-packages (from -r requirements.txt (line 18)) (0.9.0)
+Collecting yapf (from -r requirements.txt (line 19))
+  Downloading yapf-0.40.2-py3-none-any.whl.metadata (45 kB)
+     ---------------------------------------- 45.4/45.4 kB ? eta 0:00:00
+Collecting seqmagick (from -r requirements.txt (line 20))
+  Using cached seqmagick-0.8.6-py3-none-any.whl
+Requirement already satisfied: numpy in c:\gitfiles\lib\site-packages (from biopython->-r requirements.txt (line 1)) (1.
+25.2)
+Requirement already satisfied: click>=8.0.0 in c:\gitfiles\lib\site-packages (from black->-r requirements.txt (line 2))
+(8.1.7)
+Collecting mypy-extensions>=0.4.3 (from black->-r requirements.txt (line 2))
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Requirement already satisfied: packaging>=22.0 in c:\users\amcfa\appdata\roaming\python\python311\site-packages (from bl
+ack->-r requirements.txt (line 2)) (23.2)
+Collecting pathspec>=0.9.0 (from black->-r requirements.txt (line 2))
+  Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: platformdirs>=2 in c:\users\amcfa\appdata\roaming\python\python311\site-packages (from bl
+ack->-r requirements.txt (line 2)) (4.2.0)
+Collecting agate>=1.6.3 (from csvkit->-r requirements.txt (line 3))
+  Downloading agate-1.9.1-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting agate-excel>=0.2.2 (from csvkit->-r requirements.txt (line 3))
+  Downloading agate_excel-0.4.1-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting agate-dbf>=0.2.2 (from csvkit->-r requirements.txt (line 3))
+  Downloading agate_dbf-0.2.2-py2.py3-none-any.whl (3.5 kB)
+Collecting agate-sql>=0.5.3 (from csvkit->-r requirements.txt (line 3))
+  Downloading agate_sql-0.7.2-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting openpyxl (from csvkit->-r requirements.txt (line 3))
+  Downloading openpyxl-3.1.2-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting sqlalchemy (from csvkit->-r requirements.txt (line 3))
+  Downloading SQLAlchemy-2.0.27-cp311-cp311-win_amd64.whl.metadata (9.8 kB)
+Collecting xlrd (from csvkit->-r requirements.txt (line 3))
+  Downloading xlrd-2.0.1-py2.py3-none-any.whl (96 kB)
+     ---------------------------------------- 96.5/96.5 kB ? eta 0:00:00
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r requirements.txt (line 5))
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Collecting pycodestyle<2.12.0,>=2.11.0 (from flake8->-r requirements.txt (line 5))
+  Downloading pycodestyle-2.11.1-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<3.3.0,>=3.2.0 (from flake8->-r requirements.txt (line 5))
+  Downloading pyflakes-3.2.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Requirement already satisfied: typing-extensions>=4.1.0 in c:\gitfiles\lib\site-packages (from mypy->-r requirements.txt
+ (line 8)) (4.8.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\amcfa\appdata\roaming\python\python311\site-packages (
+from pandas->-r requirements.txt (line 10)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in c:\gitfiles\lib\site-packages (from pandas->-r requirements.txt (line 10)
+) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in c:\gitfiles\lib\site-packages (from pandas->-r requirements.txt (line 1
+0)) (2023.3)
+Collecting astroid<=3.1.0-dev0,>=3.0.1 (from pylint->-r requirements.txt (line 11))
+  Downloading astroid-3.0.3-py3-none-any.whl.metadata (4.5 kB)
+Collecting isort!=5.13.0,<6,>=4.2.5 (from pylint->-r requirements.txt (line 11))
+  Downloading isort-5.13.2-py3-none-any.whl.metadata (12 kB)
+Collecting tomlkit>=0.10.1 (from pylint->-r requirements.txt (line 11))
+  Downloading tomlkit-0.12.3-py3-none-any.whl.metadata (2.7 kB)
+Collecting dill>=0.3.6 (from pylint->-r requirements.txt (line 11))
+  Downloading dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: colorama>=0.4.5 in c:\users\amcfa\appdata\roaming\python\python311\site-packages (from py
+lint->-r requirements.txt (line 11)) (0.4.6)
+Collecting iniconfig (from pytest->-r requirements.txt (line 12))
+  Downloading iniconfig-2.0.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting pluggy<2.0,>=1.3.0 (from pytest->-r requirements.txt (line 12))
+  Downloading pluggy-1.4.0-py3-none-any.whl.metadata (4.3 kB)
+Requirement already satisfied: attrs>=19.0 in c:\gitfiles\lib\site-packages (from pytest-mypy->-r requirements.txt (line
+ 14)) (23.1.0)
+Requirement already satisfied: filelock>=3.0 in c:\gitfiles\lib\site-packages (from pytest-mypy->-r requirements.txt (li
+ne 14)) (3.12.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\gitfiles\lib\site-packages (from requests->-r requirements
+.txt (line 16)) (3.2.0)
+Requirement already satisfied: idna<4,>=2.5 in c:\gitfiles\lib\site-packages (from requests->-r requirements.txt (line 1
+6)) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\gitfiles\lib\site-packages (from requests->-r requirements.txt (
+line 16)) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in c:\gitfiles\lib\site-packages (from requests->-r requirements.txt (
+line 16)) (2023.7.22)
+Requirement already satisfied: markdown-it-py>=2.2.0 in c:\gitfiles\lib\site-packages (from rich->-r requirements.txt (l
+ine 17)) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in c:\users\amcfa\appdata\roaming\python\python311\site-packages
+(from rich->-r requirements.txt (line 17)) (2.17.2)
+Requirement already satisfied: importlib-metadata>=6.6.0 in c:\gitfiles\lib\site-packages (from yapf->-r requirements.tx
+t (line 19)) (6.8.0)
+Collecting tomli>=2.0.1 (from yapf->-r requirements.txt (line 19))
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting pygtrie>=2.1 (from seqmagick->-r requirements.txt (line 20))
+  Downloading pygtrie-2.5.0-py3-none-any.whl (25 kB)
+Requirement already satisfied: Babel>=2.0 in c:\gitfiles\lib\site-packages (from agate>=1.6.3->csvkit->-r requirements.t
+xt (line 3)) (2.12.1)
+Requirement already satisfied: isodate>=0.5.4 in c:\gitfiles\lib\site-packages (from agate>=1.6.3->csvkit->-r requiremen
+ts.txt (line 3)) (0.6.1)
+Collecting leather>=0.3.2 (from agate>=1.6.3->csvkit->-r requirements.txt (line 3))
+  Downloading leather-0.3.4-py2.py3-none-any.whl (31 kB)
+Collecting parsedatetime!=2.5,>=2.1 (from agate>=1.6.3->csvkit->-r requirements.txt (line 3))
+  Downloading parsedatetime-2.6-py3-none-any.whl (42 kB)
+     ---------------------------------------- 42.5/42.5 kB ? eta 0:00:00
+Collecting python-slugify>=1.2.1 (from agate>=1.6.3->csvkit->-r requirements.txt (line 3))
+  Downloading python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting pytimeparse>=1.1.5 (from agate>=1.6.3->csvkit->-r requirements.txt (line 3))
+  Downloading pytimeparse-1.1.8-py2.py3-none-any.whl (10.0 kB)
+Collecting dbfread>=2.0.5 (from agate-dbf>=0.2.2->csvkit->-r requirements.txt (line 3))
+  Downloading dbfread-2.0.7-py2.py3-none-any.whl (20 kB)
+Collecting olefile (from agate-excel>=0.2.2->csvkit->-r requirements.txt (line 3))
+  Downloading olefile-0.47-py2.py3-none-any.whl.metadata (9.7 kB)
+Requirement already satisfied: zipp>=0.5 in c:\gitfiles\lib\site-packages (from importlib-metadata>=6.6.0->yapf->-r requ
+irements.txt (line 19)) (3.17.0)
+Requirement already satisfied: mdurl~=0.1 in c:\gitfiles\lib\site-packages (from markdown-it-py>=2.2.0->rich->-r require
+ments.txt (line 17)) (0.1.2)
+Collecting et-xmlfile (from openpyxl->csvkit->-r requirements.txt (line 3))
+  Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+Requirement already satisfied: six>=1.5 in c:\users\amcfa\appdata\roaming\python\python311\site-packages (from python-da
+teutil>=2.8.2->pandas->-r requirements.txt (line 10)) (1.16.0)
+Collecting greenlet!=0.4.17 (from sqlalchemy->csvkit->-r requirements.txt (line 3))
+  Downloading greenlet-3.0.3-cp311-cp311-win_amd64.whl.metadata (3.9 kB)
+Collecting text-unidecode>=1.3 (from python-slugify>=1.2.1->agate>=1.6.3->csvkit->-r requirements.txt (line 3))
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+     ---------------------------------------- 78.2/78.2 kB ? eta 0:00:00
+Downloading biopython-1.83-cp311-cp311-win_amd64.whl (2.7 MB)
+   ---------------------------------------- 2.7/2.7 MB 29.2 MB/s eta 0:00:00
+Downloading black-24.2.0-cp311-cp311-win_amd64.whl (1.4 MB)
+   ---------------------------------------- 1.4/1.4 MB 90.1 MB/s eta 0:00:00
+Downloading csvkit-1.4.0-py2.py3-none-any.whl (43 kB)
+   ---------------------------------------- 43.9/43.9 kB ? eta 0:00:00
+Downloading flake8-7.0.0-py2.py3-none-any.whl (57 kB)
+   ---------------------------------------- 57.6/57.6 kB 3.2 MB/s eta 0:00:00
+Downloading iteration_utilities-0.12.0-cp311-cp311-win_amd64.whl (237 kB)
+   ---------------------------------------- 237.3/237.3 kB 14.2 MB/s eta 0:00:00
+Downloading mypy-1.8.0-cp311-cp311-win_amd64.whl (9.2 MB)
+   ---------------------------------------- 9.2/9.2 MB 83.6 MB/s eta 0:00:00
+Downloading pylint-3.0.3-py3-none-any.whl (510 kB)
+   ---------------------------------------- 510.6/510.6 kB 31.3 MB/s eta 0:00:00
+Downloading pytest-8.0.1-py3-none-any.whl (333 kB)
+   ---------------------------------------- 334.0/334.0 kB 20.2 MB/s eta 0:00:00
+Downloading pytest_mypy-0.10.3-py3-none-any.whl (7.1 kB)
+Downloading pytest_pylint-0.21.0-py3-none-any.whl (9.8 kB)
+Downloading yapf-0.40.2-py3-none-any.whl (254 kB)
+   ---------------------------------------- 254.7/254.7 kB ? eta 0:00:00
+Downloading agate-1.9.1-py2.py3-none-any.whl (95 kB)
+   ---------------------------------------- 95.1/95.1 kB ? eta 0:00:00
+Downloading agate_excel-0.4.1-py2.py3-none-any.whl (7.1 kB)
+Downloading agate_sql-0.7.2-py2.py3-none-any.whl (7.3 kB)
+Downloading astroid-3.0.3-py3-none-any.whl (275 kB)
+   ---------------------------------------- 275.2/275.2 kB 17.7 MB/s eta 0:00:00
+Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+   ---------------------------------------- 116.3/116.3 kB ? eta 0:00:00
+Downloading isort-5.13.2-py3-none-any.whl (92 kB)
+   ---------------------------------------- 92.3/92.3 kB ? eta 0:00:00
+Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Downloading openpyxl-3.1.2-py2.py3-none-any.whl (249 kB)
+   ---------------------------------------- 250.0/250.0 kB 15.0 MB/s eta 0:00:00
+Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Downloading pluggy-1.4.0-py3-none-any.whl (20 kB)
+Downloading pycodestyle-2.11.1-py2.py3-none-any.whl (31 kB)
+Downloading pyflakes-3.2.0-py2.py3-none-any.whl (62 kB)
+   ---------------------------------------- 62.7/62.7 kB ? eta 0:00:00
+Downloading SQLAlchemy-2.0.27-cp311-cp311-win_amd64.whl (2.1 MB)
+   ---------------------------------------- 2.1/2.1 MB 64.4 MB/s eta 0:00:00
+Downloading tomlkit-0.12.3-py3-none-any.whl (37 kB)
+Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Downloading greenlet-3.0.3-cp311-cp311-win_amd64.whl (292 kB)
+   ---------------------------------------- 292.8/292.8 kB ? eta 0:00:00
+Downloading python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+Downloading olefile-0.47-py2.py3-none-any.whl (114 kB)
+   ---------------------------------------- 114.6/114.6 kB ? eta 0:00:00
+Installing collected packages: text-unidecode, pytimeparse, pygtrie, parsedatetime, dbfread, xlrd, tomlkit, tomli, pytho
+n-slugify, pyflakes, pycodestyle, pluggy, pathspec, olefile, mypy-extensions, mccabe, leather, iteration_utilities, isor
+t, iniconfig, greenlet, graphviz, et-xmlfile, dill, csvchk, biopython, astroid, yapf, sqlalchemy, seqmagick, pytest, pyl
+int, openpyxl, mypy, flake8, black, agate, pytest-pylint, pytest-mypy, pytest-flake8, agate-sql, agate-excel, agate-dbf,
+ csvkit
+Successfully installed agate-1.9.1 agate-dbf-0.2.2 agate-excel-0.4.1 agate-sql-0.7.2 astroid-3.0.3 biopython-1.83 black-
+24.2.0 csvchk-0.3.2 csvkit-1.4.0 dbfread-2.0.7 dill-0.3.8 et-xmlfile-1.1.0 flake8-7.0.0 graphviz-0.20.1 greenlet-3.0.3 i
+niconfig-2.0.0 isort-5.13.2 iteration_utilities-0.12.0 leather-0.3.4 mccabe-0.7.0 mypy-1.8.0 mypy-extensions-1.0.0 olefi
+le-0.47 openpyxl-3.1.2 parsedatetime-2.6 pathspec-0.12.1 pluggy-1.4.0 pycodestyle-2.11.1 pyflakes-3.2.0 pygtrie-2.5.0 py
+lint-3.0.3 pytest-8.0.1 pytest-flake8-1.1.1 pytest-mypy-0.10.3 pytest-pylint-0.21.0 python-slugify-8.0.4 pytimeparse-1.1
+.8 seqmagick-0.8.6 sqlalchemy-2.0.27 text-unidecode-1.3 tomli-2.0.1 tomlkit-0.12.3 xlrd-2.0.1 yapf-0.40.2
+
+[notice] A new release of pip is available: 23.3.2 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+PS C:\Users\amcfa\biofx_python> cat Makefile
+install:
+	python3 -m pip install -r requirements.txt
+
+test:
+	./bin/uber_test.sh
+PS C:\Users\amcfa\biofx_python> all_test.py
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python> python fiba.py
+C:\gitfiles\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\fiba.py': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python> pytest -xv
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.4, pytest-8.0.1, pluggy-1.4.0 -- C:\gitfiles\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python
+plugins: anyio-4.0.0, Faker-19.6.2, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 122 items / 1 error
+
+======================================================= ERRORS ========================================================
+____________________________________ ERROR collecting 17_synth/tests/unit_test.py _____________________________________
+ImportError while importing test module 'C:\Users\amcfa\biofx_python\17_synth\tests\unit_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\gitfiles\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+17_synth\tests\unit_test.py:5: in <module>
+    from synth import read_training, find_kmers, gen_seq
+E   ModuleNotFoundError: No module named 'synth'
+=============================================== short test summary info ===============================================
+ERROR 17_synth/tests/unit_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+================================================== 1 error in 0.44s ===================================================
+PS C:\Users\amcfa\biofx_python> python pip install pytest
+C:\gitfiles\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\pip': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python> python3 -m pip install pytest
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings
+> Manage App Execution Aliases.
+PS C:\Users\amcfa\biofx_python> python -m pip install pytest
+Requirement already satisfied: pytest in c:\gitfiles\lib\site-packages (8.0.1)
+Requirement already satisfied: iniconfig in c:\gitfiles\lib\site-packages (from pytest) (2.0.0)
+Requirement already satisfied: packaging in c:\users\amcfa\appdata\roaming\python\python311\site-packages (from pytest)
+(23.2)
+Requirement already satisfied: pluggy<2.0,>=1.3.0 in c:\gitfiles\lib\site-packages (from pytest) (1.4.0)
+Requirement already satisfied: colorama in c:\users\amcfa\appdata\roaming\python\python311\site-packages (from pytest) (
+0.4.6)
+
+[notice] A new release of pip is available: 23.3.2 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+PS C:\Users\amcfa\biofx_python> cd '04_fib'
+PS C:\Users\amcfa\biofx_python\04_fib> pytest -xv
+================================================= test session starts =================================================
+platform win32 -- Python 3.11.4, pytest-8.0.1, pluggy-1.4.0 -- C:\gitfiles\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\04_fib
+plugins: anyio-4.0.0, Faker-19.6.2, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 7 items
+
+tests/fib_test.py::test_exists PASSED                                                                            [ 14%]
+tests/fib_test.py::test_usage PASSED                                                                             [ 28%]
+tests/fib_test.py::test_bad_generations PASSED                                                                   [ 42%]
+tests/fib_test.py::test_bad_litter PASSED                                                                        [ 57%]
+tests/fib_test.py::test_1 PASSED                                                                                 [ 71%]
+tests/fib_test.py::test_2 PASSED                                                                                 [ 85%]
+tests/fib_test.py::test_3 PASSED                                                                                 [100%]
+
+================================================== 7 passed in 0.99s ==================================================
+PS C:\Users\amcfa\biofx_python\04_fib> python all_test.py
+C:\gitfiles\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\04_fib\\all_test.py': [Errno 2] No such file or
+ directory
+PS C:\Users\amcfa\biofx_python\04_fib> all_test.py
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python\04_fib> cat Makefile
+.PHONY: test
+
+test:
+	python3 -m pytest -xv --flake8 --pylint --pylint-rcfile=../pylintrc --mypy fib.py tests/fib_test.py
+
+all:
+	../bin/all_test.py fib.py
+PS C:\Users\amcfa\biofx_python\04_fib> all_test.py
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+all_test.py : The term 'all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ all_test.py
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python\04_fib> ./all_test.py
+./all_test.py : The term './all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ./all_test.py
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (./all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+./all_test.py : The term './all_test.py' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ./all_test.py
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (./all_test.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python\04_fib> flake8 
+.\fib.py:9:1: E302 expected 2 blank lines, found 1
+.\fib.py:57:1: E302 expected 2 blank lines, found 1
+.\fib.py:68:1: E265 block comment should start with '# '
+.\my_work\fib_d_fails_generator.py:58:20: F821 undefined name 'Generator'
+.\my_work\fiba.py:47:13: E231 missing whitespace after ','
+.\my_work\fiba.py:48:38: E225 missing whitespace around operator
+.\my_work\fibb.py:47:5: E306 expected 1 blank line before a nested definition, found 0
+.\my_work\fibb.py:49:24: E201 whitespace after '('
+.\my_work\fibb.py:52:1: W293 blank line contains whitespace
+.\my_work\fibb.py:54:1: W293 blank line contains whitespace
+.\my_work\fibb.py:57:1: E303 too many blank lines (3)
+.\my_work\fibb.py:58:1: E305 expected 2 blank lines after class or function definition, found 3
+.\my_work\fibc_fails.py:48:5: F841 local variable 'args' is assigned to but never used
+.\my_work\fibc_fails.py:50:24: F821 undefined name 'Generator'
+.\my_work\fibc_fails.py:50:43: E231 missing whitespace after ','
+.\my_work\fibc_fails.py:51:10: E231 missing whitespace after ','
+.\my_work\fibc_fails.py:51:16: E231 missing whitespace after ','
+.\my_work\fibc_fails.py:55:14: E231 missing whitespace after ','
+.\my_work\fibc_fails.py:55:29: E225 missing whitespace around operator
+.\my_work\fibe_memoization.py:8:1: E302 expected 2 blank lines, found 1
+.\my_work\fibe_memoization.py:56:1: E302 expected 2 blank lines, found 1
+.\my_work\fibe_memoization.py:67:1: E265 block comment should start with '# '
+PS C:\Users\amcfa\biofx_python\04_fib> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20240219121634
+**********************
