@@ -1,19 +1,44 @@
 ﻿**********************
-Windows PowerShell transcript start
-Start time: 20240221132229
-Username: OATSPC\amcfa
-RunAs User: OATSPC\amcfa
-Configuration Name: 
-Machine: OATSPC (Microsoft Windows NT 10.0.22621.0)
-Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-Process ID: 7064
-PSVersion: 5.1.22621.2506
-PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
-BuildVersion: 10.0.22621.2506
-CLRVersion: 4.0.30319.42000
-WSManStackVersion: 3.0
-PSRemotingProtocolVersion: 2.3
-SerializationVersion: 1.1.0.1
+
 **********************
 Transcript started, output file is C:\Users\amcfa\biofx_python\biofx_python\Chapter5.1.txt
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -fp 'Compute GC content' cgc.py
+Done, see new script "cgc.py".
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> cd "my_notebooks"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc\my_notebooks> ./cgc.py tests/inputs/1.fa
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc\my_notebooks> pytest -xv
+============================================================================================== test session starts ===============================================================================================
+platform win32 -- Python 3.11.4, pytest-8.0.1, pluggy-1.4.0 -- C:\gitfiles\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\biofx_python\05_gc\my_notebooks
+plugins: anyio-4.0.0, Faker-19.6.2, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 0 items
+
+============================================================================================= no tests ran in 0.01s ==============================================================================================
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc\my_notebooks> pytest -xv
+============================================================================================== test session starts ===============================================================================================
+platform win32 -- Python 3.11.4, pytest-8.0.1, pluggy-1.4.0 -- C:\gitfiles\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\amcfa\biofx_python\biofx_python\05_gc\my_notebooks
+plugins: anyio-4.0.0, Faker-19.6.2, flake8-1.1.1, mypy-0.10.3, pylint-0.21.0
+collected 6 items
+
+tests/cgc_test.py::test_exists PASSED                                                                                                                                                                       [ 16%]
+tests/cgc_test.py::test_usage FAILED                                                                                                                                                                        [ 33%]
+
+==================================================================================================== FAILURES ====================================================================================================
+___________________________________________________________________________________________________ test_usage ___________________________________________________________________________________________________
+
+    def test_usage() -> None:
+        """ Usage """
+
+        for flag in ['-h', '--help']:
+            rv, out = getstatusoutput(f'{RUN} {flag}')
+>           assert rv == 0
+E           assert 1 == 0
+
+tests\cgc_test.py:29: AssertionError
+============================================================================================ short test summary info =============================================================================================
+FAILED tests/cgc_test.py::test_usage - assert 1 == 0
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================================================================================== 1 failed, 1 passed in 0.56s ===========================================================================================
