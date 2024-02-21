@@ -1,0 +1,136 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20240221125023
+Username: OATSPC\amcfa
+RunAs User: OATSPC\amcfa
+Configuration Name: 
+Machine: OATSPC (Microsoft Windows NT 10.0.22621.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 13840
+PSVersion: 5.1.22621.2506
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.2506
+BuildVersion: 10.0.22621.2506
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\chapter_5.txt
+PS C:\Users\amcfa\biofx_python> cd "05_gca"
+cd : Cannot find path 'C:\Users\amcfa\biofx_python\05_gca' because it does not exist.
+At line:1 char:1
++ cd "05_gca"
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\amcfa\biofx_python\05_gca:String) [Set-Location], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\Users\amcfa\biofx_python\05_gca' because it does not exist.
+At line:1 char:1
++ cd "05_gca"
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\amcfa\biofx_python\05_gca:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\amcfa\biofx_python> cd "\05_gca"
+cd : Cannot find path 'C:\05_gca' because it does not exist.
+At line:1 char:1
++ cd "\05_gca"
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\05_gca:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\05_gca' because it does not exist.
+At line:1 char:1
++ cd "\05_gca"
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\05_gca:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\amcfa\biofx_python> cd "\05_gc"
+cd : Cannot find path 'C:\05_gc' because it does not exist.
+At line:1 char:1
++ cd "\05_gc"
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\05_gc:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\05_gc' because it does not exist.
+At line:1 char:1
++ cd "\05_gc"
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\05_gc:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\amcfa\biofx_python> cd "05_gc"
+PS C:\Users\amcfa\biofx_python\05_gc> cp solution1_list.py cgc.py
+PS C:\Users\amcfa\biofx_python\05_gc> ./chc.py -h
+./chc.py : The term './chc.py' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ./chc.py -h
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (./chc.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+./chc.py : The term './chc.py' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ./chc.py -h
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (./chc.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python\05_gc> ./cgc.py -h
+PS C:\Users\amcfa\biofx_python\05_gc> pythion cgc.py -h
+pythion : The term 'pythion' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ pythion cgc.py -h
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (pythion:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+pythion : The term 'pythion' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ pythion cgc.py -h
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (pythion:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python\05_gc> python cgc.py -h
+usage: cgc.py [-h] [FILE]
+
+Compute GC content
+
+positional arguments:
+  FILE        Input sequence file (default: <_io.TextIOWrapper name='<stdin>' mode='r' encoding='utf-8'>)
+
+options:
+  -h, --help  show this help message and exit
+PS C:\Users\amcfa\biofx_python\05_gc> python cgc.py tests/inputs/1.fa
+Rosalind_0808 60.919540
+PS C:\Users\amcfa\biofx_python\05_gc> cat tests/inputs/1.fa
+>Rosalind_6404
+CCTGCGGAAGATCGGCACTAGAATAGCCAGAACCGTTTCTCTGAGGCTTCCGGCCTTCCC
+TCCCACTAATAATTCTGAGG
+>Rosalind_5959
+CCATCGGTAGCGCATCCTTAGTCCAATTAAGTCCCTATCCAGGCGCTCCGCCGAAGGTCT
+ATATCCATTTGTCAGCAGACACGC
+>Rosalind_0808
+CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGAC
+TGGGAACCTGCGGGCAGTAGGTGGAAT
+PS C:\Users\amcfa\biofx_python\05_gc> new.py -fp 'Compute GC content' cgc.py
+new.py : The term 'new.py' is not recognized as the name of a cmdlet, function, script file, or operable program. Check 
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ new.py -fp 'Compute GC content' cgc.py
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (new.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+new.py : The term 'new.py' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ new.py -fp 'Compute GC content' cgc.py
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (new.py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\amcfa\biofx_python\05_gc> python new -fp 'Compute GC content' cgc.py
+C:\gitfiles\python.exe: can't open file 'C:\\Users\\amcfa\\biofx_python\\05_gc\\new': [Errno 2] No such file or directory
+PS C:\Users\amcfa\biofx_python\05_gc> new -fp 'Compute GC content' cgc.py
+Done, see new script "cgc.py".
