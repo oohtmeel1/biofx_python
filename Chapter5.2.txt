@@ -1,0 +1,205 @@
+**********************
+PowerShell transcript start
+Start time: 20240227122346
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\biofx_python\Chapter5.2.txt
+PS C:\Users\amcfa> cd "biofx_python"
+PS C:\Users\amcfa\biofx_python> cd "05_gc"
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\05_gc' because it does not exist.
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\05_gc' because it does not exist.
+PS C:\Users\amcfa\biofx_python> cd "\05_gc"
+Set-Location: Cannot find path 'C:\05_gc' because it does not exist.
+Set-Location: Cannot find path 'C:\05_gc' because it does not exist.
+PS C:\Users\amcfa\biofx_python> cd "/05_gc"
+Set-Location: Cannot find path 'C:\05_gc' because it does not exist.
+Set-Location: Cannot find path 'C:\05_gc' because it does not exist.
+PS C:\Users\amcfa\biofx_python> cd '05_gc'
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\05_gc' because it does not exist.
+Set-Location: Cannot find path 'C:\Users\amcfa\biofx_python\05_gc' because it does not exist.
+PS C:\Users\amcfa\biofx_python> ls out/
+Get-ChildItem: Cannot find path 'C:\Users\amcfa\biofx_python\out\' because it does not exist.
+Get-ChildItem: Cannot find path 'C:\Users\amcfa\biofx_python\out\' because it does not exist.
+PS C:\Users\amcfa\biofx_python> ls 
+
+    Directory: C:\Users\amcfa\biofx_python
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           2/27/2024 12:23 PM                biofx_python
+-a---           2/21/2024  1:20 PM           9548 chapter_5.txt
+
+PS C:\Users\amcfa\biofx_python> cd 'biofx_python'
+PS C:\Users\amcfa\biofx_python\biofx_python> cd '05_gc'
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -fp 'Compute GC content' cgd.py
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="new"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python new -fp 'Compute GC content' cgd.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python3 new -fp 'Compute GC content' cgd.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python3 new -fp 'Compute GC content' cgc.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -fp 'Compute GC content' cgc.py
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="new"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python -m pip install new-py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -fp 'Compute GC content' cgc.py
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="new"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python new -fp 'Compute GC content' cgc.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python cgc.py -h
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -fp 'Compute GC content' cgc.py
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="new"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -fp 'Compute GC content' cgd.py
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="new"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> new -h
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+new: The term 'new' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="new"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python new -h
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> make test
+make: The term 'make' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+make: The term 'make' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="make"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python make test
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python -m pip install make-test
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> cp cgd.py
+Copy-Item: Cannot find path 'C:\Users\amcfa\biofx_python\biofx_python\05_gc\cgd.py' because it does not exist.
+Copy-Item: Cannot find path 'C:\Users\amcfa\biofx_python\biofx_python\05_gc\cgd.py' because it does not exist.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> pytest-xv
+pytest-xv: The term 'pytest-xv' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+pytest-xv: The term 'pytest-xv' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="pytest-xv"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python -m pip install pytest
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> pytest-xv
+pytest-xv: The term 'pytest-xv' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+pytest-xv: The term 'pytest-xv' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="pytest-xv"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python pytest -xv
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> pytest -xv
+pytest: The term 'pytest' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+pytest: The term 'pytest' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="pytest"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> pytest -xv
+pytest: The term 'pytest' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+pytest: The term 'pytest' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> CommandInvocation(Get-Command): "Get-Command"
+>> ParameterBinding(Get-Command): name="UseFuzzyMatching"; value="True"
+>> ParameterBinding(Get-Command): name="FuzzyMinimumDistance"; value="1"
+>> ParameterBinding(Get-Command): name="Name"; value="pytest"
+>> CommandInvocation(Select-Object): "Select-Object"
+>> ParameterBinding(Select-Object): name="First"; value="5"
+>> ParameterBinding(Select-Object): name="Unique"; value="True"
+>> ParameterBinding(Select-Object): name="ExpandProperty"; value="Name"
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> stop-transcript
+**********************
+PowerShell transcript end
+End time: 20240227125934
+**********************
