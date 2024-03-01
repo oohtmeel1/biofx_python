@@ -1,0 +1,91 @@
+**********************
+PowerShell transcript start
+Start time: 20240301124046
+**********************
+Transcript started, output file is C:\Users\amcfa\biofx_python\biofx_python\Chapter5.3.txt
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python ./genseq.py -n 10000 -o 10k.fa
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python hyperfine-L prg ./solution2_unit_test.py,./solution3_max_var.py '{prg} 10l.fa'
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python hyperfine -L prg ./solution2_unit_test.py,./solution3_max_var.py '{prg} 10l.fa'
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit_test.py,./solution3_max_var.py '{prg} 10l.fa'
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> --show-output
+At line:1 char:3
++ --show-output
++   ~
+Missing expression after unary operator '--'.
+
+At line:1 char:3
++ --show-output
++   ~~~~~~~~~~~
+Unexpected token 'show-output' in expression or statement.
+ParserError: 
+Line |
+   1 |  --show-output
+     |    ~
+     | Missing expression after unary operator '--'.
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit_test.py,./solution3_max_var.py '{prg} 10l.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit.py,./solution3_max_var.py '{prg} 10l.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit.py,./solution3_max_var.py '{prg} 10l.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit.py, ./solution3_max_var.py '{prg} 10l.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit.py, ./solution3_max_var.py '{prg} 10k.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python hyperfine -h
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> python hyperfine 
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> winget install hyperfine
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg ./solution2_unit.py, ./solution3_max_var.py '{prg} 10k.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg /solution2_unit.py, /solution3_max_var.py '{prg} 10k.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -L prg python /solution2_unit.py, /solution3_max_var.py '{prg} 10k.fa'--show-output
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine -h
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine --input /solutions2_unit_test.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine --input /solutions2_unit.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine --input </solutions2_unit.py>
+At line:1 char:19
++ hyperfine --input </solutions2_unit.py>
++                   ~
+The '<' operator is reserved for future use.
+ParserError: 
+Line |
+   1 |  hyperfine --input </solutions2_unit.py>
+     |                    ~
+     | The '<' operator is reserved for future use.
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine --show_output /solutions2_unit.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> hyperfine --show-output /solutions2_unit.py
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> Measure-Command {python ./fib.py tests/inputs/input1.txt}
+
+Days              : 0
+Hours             : 0
+Minutes           : 0
+Seconds           : 0
+Milliseconds      : 68
+Ticks             : 686114
+TotalDays         : 7.94113425925926E-07
+TotalHours        : 1.90587222222222E-05
+TotalMinutes      : 0.00114352333333333
+TotalSeconds      : 0.0686114
+TotalMilliseconds : 68.6114
+
+PS C:\Users\amcfa\biofx_python\biofx_python\05_gc> Stop-transcript
+**********************
+PowerShell transcript end
+End time: 20240301131026
+**********************
